@@ -948,6 +948,7 @@ local shove = {
   ---@param globalEffects love.Shader[]|nil Optional effects to apply globally
   ---@return boolean success Whether drawing was ended successfully
   endDraw = function(globalEffects)
+    
     -- Check if we're in drawing mode
     if not state.inDrawMode then
       error("shove.endDraw: Not in drawing mode. Call beginDraw() before calling endDraw().", 2)
@@ -1248,6 +1249,7 @@ local shove = {
     local layer = getLayer(layerName)
     if not layer then return nil end
     return layer.zIndex
+  
   end,
 
 --- Show a layer (make it visible)
