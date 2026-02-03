@@ -1,19 +1,17 @@
-function love.load()
+require("init")
 
+function love.load()
+    font = require("assets/font/skull")
+    lg.setFont(font)
+    shove.createLayer("game")
 end
 
 function love.update(dt)
-
-end
+    input:update()
+end 
 
 function love.draw()
-
-end
-
-function love.resize(w,h)
-
-end
-
-function love.quit()
-
+    beginDraw()
+        lg.print("hello world")
+    endDraw()
 end
